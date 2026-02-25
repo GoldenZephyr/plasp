@@ -24,7 +24,7 @@ satisfied(DerivedPredicate, type(or), T) :- precondition(DerivedPredicate, type(
 
 holds(DerivedVariable, Value, T) :- satisfied(DerivedPredicate, Type, T), postcondition(DerivedPredicate, Type, effect(unconditional), DerivedVariable, Value).
 
-holds(derivedVariable(DerivedVariable), value(DerivedVariable, false), T) :- derivedVariable(DerivedVariable), not holds(derivedVariable(DerivedVariable), value(DerivedVariable, true), T), time(T).
+holds(DerivedVariable, value(DerivedVariable, false), T) :- derivedVariable(DerivedVariable), not holds(DerivedVariable, value(DerivedVariable, true), T), time(T).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Perform actions
