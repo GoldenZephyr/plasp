@@ -57,6 +57,9 @@ void translateVariablesForRuleBody(colorlog::ColorStream &outputStream, const T 
 			outputStream << colorlog::Function("has") << "(";
 			translateVariableDeclaration(outputStream, *variable, variableIDs);
 			outputStream << ", " << colorlog::Keyword("type") << "(" << *type << "))";
+			outputStream << ", " << colorlog::Keyword("inworld") << "(";
+			translateVariableDeclaration(outputStream, *variable, variableIDs);
+			outputStream << ")";
 		}
 		else
 		{
